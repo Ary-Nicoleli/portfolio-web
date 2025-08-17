@@ -7,15 +7,16 @@
 }
 
 body {
-    background: #f3f4f6; /* fundo claro uniforme */
+    background: linear-gradient(135deg, #f3f4f6, #e0e7ff);
     color: #111827;
     line-height: 1.6;
+    transition: background 0.3s ease;
 }
 
-/* Header minimalista */
 header {
-    background: #ffffff;
-    box-shadow: 0 1px 5px rgba(0,0,0,0.1);
+    background: rgba(255,255,255,0.8);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
     position: sticky;
     top: 0;
     z-index: 1000;
@@ -42,70 +43,46 @@ header {
     text-decoration: none;
     color: #1e40af;
     font-weight: 500;
-    transition: color 0.2s ease;
+    transition: color 0.3s ease;
 }
 
 .navbar a:hover {
     color: #2563eb;
 }
 
+main {
+    padding: 2rem;
+}
+
 section {
-    padding: 3rem 2rem;
+    padding: 4rem 0;
     text-align: center;
 }
 
 h2 {
     color: #1e40af;
-    margin-bottom: 1rem;
+    margin-bottom: 2rem;
     font-size: 2rem;
 }
 
-/* Grid de tecnologias centralizado minimalista */
-.tech-grid {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
+.tech-grid, .projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
     gap: 1rem;
-    margin-top: 1rem;
+    justify-items: center;
 }
 
-.tech-card {
-    background: #e5e7eb; /* cinza claro */
-    padding: 0.8rem 1.5rem;
-    border-radius: 8px;
-    font-weight: 500;
-    min-width: 120px;
-    text-align: center;
-    transition: transform 0.2s ease, box-shadow 0.2s ease;
-}
-
-.tech-card:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-}
-
-/* Grid de projetos */
-.projects-grid {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 1rem;
-}
-
-.project-card {
-    background: #ffffff;
+.tech-card, .project-card {
+    background: #f0f0f0;
     padding: 1rem 1.5rem;
-    border-radius: 8px;
-    min-width: 250px;
-    max-width: 400px;
-    text-align: center;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
-    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.project-card:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+.tech-card:hover, .project-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.1);
 }
 
 .project-card a {
@@ -114,9 +91,9 @@ h2 {
     padding: 0.3rem 0.6rem;
     background-color: #1e40af;
     color: #fff;
-    border-radius: 4px;
+    border-radius: 6px;
     text-decoration: none;
-    transition: background 0.2s ease;
+    transition: background 0.3s ease;
 }
 
 .project-card a:hover {
@@ -126,15 +103,16 @@ h2 {
 footer {
     text-align: center;
     padding: 2rem;
-    background: #ffffff;
-    box-shadow: 0 -1px 5px rgba(0,0,0,0.05);
+    background: rgba(255,255,255,0.8);
+    backdrop-filter: blur(10px);
 }
 
-/* Efeito fade-in minimalista */
+/* Efeitos suaves de fade-in */
 .fade-in {
     opacity: 0;
-    transform: translateY(10px);
-    animation: fadeIn 0.8s forwards;
+    transform: translateY(20px);
+    animation: fadeIn 1s forwards;
+    animation-delay: 0.3s;
 }
 
 @keyframes fadeIn {
