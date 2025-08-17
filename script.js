@@ -1,11 +1,20 @@
-const sections = document.querySelectorAll('section');
+// Aplica efeito fade-in em cada seção ao rolar
+const faders = document.querySelectorAll('.fade-in');
 
-window.addEventListener('scroll', () => {
-  const scrollY = window.scrollY;
-  sections.forEach(sec => {
-    if (scrollY + window.innerHeight > sec.offsetTop + 100) {
-      sec.style.opacity = '1';
-      sec.style.transform = 'translateY(0)';
-    }
-  });
+const appearOptions = {
+  threshold: 0.2,
+  rootMargin: "0px 0px -50px 0px"
+};
+
+const appearOnScroll = new IntersectionObserver(function(entries, appearOnScroll){
+    entries.forEach(entry => {
+        if(!entry.isIntersecting) return;
+        entry.target.style.animationPlayState = 'running';
+        appearOnScroll.unobserve(entry.target);
+    });
+}, appearOptions);
+
+faders.forEach(fader => {
+    fader.style.animationPlayState = 'paused';
+    appearOnScroll.observe(fader);
 });
