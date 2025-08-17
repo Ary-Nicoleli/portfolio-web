@@ -1,65 +1,67 @@
 /* Reset básico */
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Corpo */
+body {
+  font-family: 'Segoe UI', Tahoma, sans-serif;
+  background-color: #f3f3f3;
+  color: #222;
+  line-height: 1.6;
+  padding: 20px;
 }
 
 /* Header */
 header {
-    background-color: #1e1e2f;
-    color: #fff;
-    text-align: center;
-    padding: 2rem;
+  background-color: #0078d4;
+  color: white;
+  padding: 30px 20px;
+  text-align: center;
+  border-radius: 8px;
 }
 
-header nav a {
-    color: #fff;
-    margin: 0 1rem;
-    text-decoration: none;
-    font-weight: bold;
+header h1 {
+  font-size: 2em;
+  margin-bottom: 10px;
 }
 
-header nav a:hover {
-    text-decoration: underline;
+header p {
+  font-size: 1.1em;
 }
 
 /* Seções */
 section {
-    padding: 2rem;
-    max-width: 800px;
-    margin: auto;
+  background-color: white;
+  margin: 20px auto;
+  padding: 20px;
+  border-radius: 8px;
+  max-width: 900px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
 }
 
 section h2 {
-    margin-bottom: 1rem;
-    color: #1e1e2f;
+  color: #0078d4;
+  margin-bottom: 10px;
 }
 
-/* Projetos */
-.projeto {
-    background-color: #f0f0f0;
-    padding: 1rem;
-    margin-bottom: 1rem;
-    border-radius: 8px;
+/* Links */
+a {
+  color: #0078d4;
+  text-decoration: none;
+  transition: color 0.3s;
 }
 
-.projeto a {
-    color: #1e1e2f;
-    text-decoration: none;
-    font-weight: bold;
-}
-
-.projeto a:hover {
-    text-decoration: underline;
+a:hover {
+  color: #005a9e;
 }
 
 /* Footer */
 footer {
-    text-align: center;
-    padding: 1rem;
-    background-color: #1e1e2f;
-    color: #fff;
-    margin-top: 2rem;
+  text-align: center;
+  margin: 30px 0;
+  color: #555;
+  font-size: 0.9em;
 }
