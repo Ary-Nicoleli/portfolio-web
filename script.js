@@ -1,4 +1,3 @@
-// Aplica efeito fade-in em cada seção ao rolar
 const faders = document.querySelectorAll('.fade-in');
 
 const appearOptions = {
@@ -8,7 +7,7 @@ const appearOptions = {
 
 const appearOnScroll = new IntersectionObserver((entries, observer) => {
     entries.forEach(entry => {
-        if (!entry.isIntersecting) return;
+        if(!entry.isIntersecting) return;
         entry.target.style.animationPlayState = 'running';
         observer.unobserve(entry.target);
     });
