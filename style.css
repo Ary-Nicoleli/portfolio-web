@@ -8,8 +8,8 @@
 
 /* Corpo */
 body {
-  background-color: #f9f9f9;
-  color: #333;
+  background-color: #f5f6fa; /* tom claro suave */
+  color: #1b1b1b;
   line-height: 1.6;
 }
 
@@ -17,41 +17,48 @@ body {
 header {
   text-align: center;
   padding: 50px 20px;
-  background: linear-gradient(135deg, #e3f2fd, #ffffff);
-  border-bottom: 1px solid #ddd;
-  transition: background 0.3s ease;
+  background: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid #e0e0e0;
+  border-radius: 0 0 20px 20px;
 }
 
 header h1 {
-  font-size: 2.5rem;
+  font-size: 2.8rem;
+  color: #0078d7; /* azul Microsoft */
   margin-bottom: 10px;
-  color: #0078d4;
 }
 
 header p {
   font-size: 1.2rem;
-  color: #555;
+  color: #333;
 }
 
 /* Navegação */
 nav {
   display: flex;
   justify-content: center;
-  background: #ffffff;
-  border-bottom: 1px solid #ddd;
-  padding: 10px 0;
-  gap: 20px;
+  background: rgba(255, 255, 255, 0.8);
+  padding: 12px 0;
+  gap: 25px;
+  backdrop-filter: blur(10px);
+  border-radius: 10px;
+  margin: -20px auto 40px auto;
+  width: fit-content;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
 }
 
 nav a {
-  color: #0078d4;
+  color: #0078d7;
   text-decoration: none;
   font-weight: 600;
-  transition: color 0.3s, transform 0.2s;
+  padding: 6px 12px;
+  border-radius: 8px;
+  transition: background 0.3s, transform 0.2s;
 }
 
 nav a:hover {
-  color: #005a9e;
+  background: rgba(0,120,215,0.1);
   transform: translateY(-2px);
 }
 
@@ -59,44 +66,44 @@ nav a:hover {
 section {
   max-width: 900px;
   margin: 40px auto;
-  padding: 30px 20px;
-  background: white;
-  border-radius: 10px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+  padding: 30px 25px;
+  background: rgba(255,255,255,0.8);
+  border-radius: 20px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.05);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 section:hover {
   transform: translateY(-5px);
-  box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+  box-shadow: 0 12px 30px rgba(0,0,0,0.1);
 }
 
 section h2 {
-  color: #0078d4;
+  color: #0078d7;
   margin-bottom: 15px;
 }
 
 /* Cards de projeto */
 .card {
   padding: 20px;
-  border-radius: 8px;
-  background-color: #e3f2fd;
+  border-radius: 15px;
+  background: rgba(0, 120, 215, 0.05);
   margin-top: 15px;
   transition: transform 0.3s, box-shadow 0.3s;
 }
 
 .card:hover {
   transform: translateY(-5px);
-  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+  box-shadow: 0 6px 20px rgba(0,0,0,0.08);
 }
 
 .card a {
   display: inline-block;
   margin-top: 10px;
   color: white;
-  background-color: #0078d4;
+  background-color: #0078d7;
   padding: 8px 15px;
-  border-radius: 5px;
+  border-radius: 8px;
   text-decoration: none;
   transition: background 0.3s;
 }
@@ -107,7 +114,7 @@ section h2 {
 
 /* Links gerais */
 a {
-  color: #0078d4;
+  color: #0078d7;
 }
 
 a:hover {
@@ -120,4 +127,11 @@ footer {
   padding: 20px;
   color: #555;
   font-size: 0.9rem;
+}
+
+/* Animações suaves */
+section, .card {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
 }
