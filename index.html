@@ -7,9 +7,9 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <aside class="sidebar">
-        <h1>Ary Nicoleli</h1>
-        <nav>
+    <header>
+        <nav class="navbar">
+            <h1>Ary Nicoleli</h1>
             <ul>
                 <li><a href="#sobre">Sobre</a></li>
                 <li><a href="#tecnologias">Tecnologias</a></li>
@@ -17,60 +17,66 @@
                 <li><a href="#contato">Contato</a></li>
             </ul>
         </nav>
-    </aside>
+    </header>
 
-    <main>
-        <!-- Sobre -->
-        <section id="sobre" class="fade-in">
-            <h2>Olá, eu sou Ary Nicoleli 👋</h2>
-            <p>🎓 Estudante de Análise e Desenvolvimento de Sistemas | Aspirante a Desenvolvedor de Software</p>
-            <p>🔍 Busco oportunidades de estágio e projetos práticos em desenvolvimento web, mobile e automação de sistemas.</p>
-        </section>
+    <section id="sobre" class="fade-in">
+        <h2>Olá, eu sou Ary Nicoleli 👋</h2>
+        <p>🎓 Estudante de Análise e Desenvolvimento de Sistemas | Aspirante a Desenvolvedor de Software</p>
+        <p>🔍 Busco oportunidades de estágio e projetos práticos em desenvolvimento web, mobile e automação de sistemas.</p>
+    </section>
 
-        <!-- Tecnologias -->
-        <section id="tecnologias" class="fade-in">
-            <h2>Tecnologias</h2>
-            <div class="tech-grid">
-                <div class="tech-card">HTML</div>
-                <div class="tech-card">CSS</div>
-                <div class="tech-card">JavaScript</div>
-                <div class="tech-card">Git & GitHub</div>
-                <div class="tech-card">SQL / Bancos de dados</div>
-                <div class="tech-card">Cloud Computing</div>
+    <section id="tecnologias" class="fade-in">
+        <h2>Tecnologias</h2>
+        <div class="tech-grid">
+            <div class="tech-card">HTML</div>
+            <div class="tech-card">CSS</div>
+            <div class="tech-card">JavaScript</div>
+            <div class="tech-card">Git & GitHub</div>
+            <div class="tech-card">SQL / Bancos de dados</div>
+            <div class="tech-card">Cloud Computing</div>
+        </div>
+    </section>
+
+    <section id="projetos" class="fade-in">
+        <h2>Projetos</h2>
+        <div class="projects-grid">
+            <div class="project-card">
+                <h3>Portfólio Web</h3>
+                <p>Site pessoal com meus projetos acadêmicos e informações de contato.</p>
+                <a href="https://ary-nicoleli.github.io/portfolio-web/" target="_blank">Ver projeto</a>
             </div>
-        </section>
+        </div>
+    </section>
 
-        <!-- Projetos -->
-        <section id="projetos" class="fade-in">
-            <h2>Projetos</h2>
-            <div class="projects-grid">
-                <div class="project-card">
-                    <h3>Portfólio Web</h3>
-                    <p>Site pessoal com meus projetos acadêmicos e informações de contato.</p>
-                    <a href="https://ary-nicoleli.github.io/portfolio-web/" target="_blank">Ver projeto</a>
-                </div>
-                <!-- Você pode adicionar mais projetos aqui -->
-                <div class="project-card">
-                    <h3>Automação de Sistemas</h3>
-                    <p>Exemplo de projeto de automação comercial e processos internos.</p>
-                    <a href="#" target="_blank">Ver projeto</a>
-                </div>
-            </div>
-        </section>
-
-        <!-- Contato -->
-        <section id="contato" class="fade-in">
-            <h2>Contato</h2>
-            <p>📫 LinkedIn: <a href="https://www.linkedin.com/in/ary-nicoleli" target="_blank">Ary Nicoleli</a></p>
-            <p>💻 GitHub: <a href="https://github.com/Ary-Nicoleli" target="_blank">Ary-Nicoleli</a></p>
-            <p>✉️ Email: <a href="mailto:ary.nicoleli@example.com">ary.nicoleli@example.com</a></p>
-        </section>
-    </main>
+    <section id="contato" class="fade-in">
+        <h2>Contato</h2>
+        <p>📫 LinkedIn: <a href="https://www.linkedin.com/in/ary-nicoleli" target="_blank">Ary Nicoleli</a></p>
+        <p>💻 GitHub: <a href="https://github.com/Ary-Nicoleli" target="_blank">Ary-Nicoleli</a></p>
+    </section>
 
     <footer>
         <p>© 2025 Ary Nicoleli</p>
     </footer>
 
-    <script src="script.js"></script>
+    <script>
+    // Aplica efeito fade-in em cada seção ao rolar
+    const faders = document.querySelectorAll('.fade-in');
+    const appearOptions = {
+      threshold: 0.2,
+      rootMargin: "0px 0px -50px 0px"
+    };
+    const appearOnScroll = new IntersectionObserver(function(entries, observer){
+        entries.forEach(entry => {
+            if(!entry.isIntersecting) return;
+            entry.target.style.animationPlayState = 'running';
+            observer.unobserve(entry.target);
+        });
+    }, appearOptions);
+
+    faders.forEach(fader => {
+        fader.style.animationPlayState = 'paused';
+        appearOnScroll.observe(fader);
+    });
+    </script>
 </body>
 </html>
