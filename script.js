@@ -6,11 +6,11 @@ const appearOptions = {
   rootMargin: "0px 0px -50px 0px"
 };
 
-const appearOnScroll = new IntersectionObserver(function(entries, appearOnScroll){
+const appearOnScroll = new IntersectionObserver((entries, observer) => {
     entries.forEach(entry => {
-        if(!entry.isIntersecting) return;
+        if (!entry.isIntersecting) return;
         entry.target.style.animationPlayState = 'running';
-        appearOnScroll.unobserve(entry.target);
+        observer.unobserve(entry.target);
     });
 }, appearOptions);
 
