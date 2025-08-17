@@ -7,16 +7,15 @@
 }
 
 body {
-    background: linear-gradient(135deg, #f3f4f6, #e0e7ff);
+    background: #f3f4f6; /* fundo claro uniforme */
     color: #111827;
     line-height: 1.6;
-    transition: background 0.3s ease;
 }
 
+/* Header minimalista */
 header {
-    background: rgba(255,255,255,0.8);
-    backdrop-filter: blur(10px);
-    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+    background: #ffffff;
+    box-shadow: 0 1px 5px rgba(0,0,0,0.1);
     position: sticky;
     top: 0;
     z-index: 1000;
@@ -43,7 +42,7 @@ header {
     text-decoration: none;
     color: #1e40af;
     font-weight: 500;
-    transition: color 0.3s ease;
+    transition: color 0.2s ease;
 }
 
 .navbar a:hover {
@@ -51,7 +50,8 @@ header {
 }
 
 section {
-    padding: 4rem 2rem;
+    padding: 3rem 2rem;
+    text-align: center;
 }
 
 h2 {
@@ -60,53 +60,52 @@ h2 {
     font-size: 2rem;
 }
 
-/* Grid de tecnologias centralizado */
+/* Grid de tecnologias centralizado minimalista */
 .tech-grid {
     display: flex;
     flex-wrap: wrap;
-    justify-content: center; /* centraliza horizontalmente */
+    justify-content: center;
     gap: 1rem;
     margin-top: 1rem;
 }
 
-/* Cards de tecnologia */
 .tech-card {
     background: #e5e7eb; /* cinza claro */
-    padding: 1rem 2rem;
-    border-radius: 12px;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
-    text-align: center; /* centraliza o texto */
+    padding: 0.8rem 1.5rem;
+    border-radius: 8px;
     font-weight: 500;
     min-width: 120px;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-align: center;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
 .tech-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+    transform: translateY(-3px);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
 }
 
 /* Grid de projetos */
 .projects-grid {
     display: flex;
-    flex-wrap: wrap;
-    justify-content: center; /* centraliza horizontalmente */
+    flex-direction: column;
+    align-items: center;
     gap: 1rem;
 }
 
-/* Cards de projetos */
 .project-card {
-    background: #f9fafb; /* cinza muito claro */
-    padding: 1rem 2rem;
-    border-radius: 12px;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+    background: #ffffff;
+    padding: 1rem 1.5rem;
+    border-radius: 8px;
+    min-width: 250px;
+    max-width: 400px;
     text-align: center;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
 .project-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+    transform: translateY(-3px);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
 }
 
 .project-card a {
@@ -115,9 +114,9 @@ h2 {
     padding: 0.3rem 0.6rem;
     background-color: #1e40af;
     color: #fff;
-    border-radius: 6px;
+    border-radius: 4px;
     text-decoration: none;
-    transition: background 0.3s ease;
+    transition: background 0.2s ease;
 }
 
 .project-card a:hover {
@@ -127,16 +126,15 @@ h2 {
 footer {
     text-align: center;
     padding: 2rem;
-    background: rgba(255,255,255,0.8);
-    backdrop-filter: blur(10px);
+    background: #ffffff;
+    box-shadow: 0 -1px 5px rgba(0,0,0,0.05);
 }
 
-/* Efeitos suaves de fade-in */
+/* Efeito fade-in minimalista */
 .fade-in {
     opacity: 0;
-    transform: translateY(20px);
-    animation: fadeIn 1s forwards;
-    animation-delay: 0.3s;
+    transform: translateY(10px);
+    animation: fadeIn 0.8s forwards;
 }
 
 @keyframes fadeIn {
