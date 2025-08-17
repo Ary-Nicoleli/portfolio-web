@@ -3,55 +3,111 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: 'Segoe UI', Tahoma, sans-serif;
 }
 
 /* Corpo */
 body {
-  font-family: 'Segoe UI', Tahoma, sans-serif;
-  background-color: #f3f3f3;
-  color: #222;
+  background-color: #f9f9f9;
+  color: #333;
   line-height: 1.6;
-  padding: 20px;
 }
 
 /* Header */
 header {
-  background-color: #0078d4;
-  color: white;
-  padding: 30px 20px;
   text-align: center;
-  border-radius: 8px;
+  padding: 50px 20px;
+  background: linear-gradient(135deg, #e3f2fd, #ffffff);
+  border-bottom: 1px solid #ddd;
+  transition: background 0.3s ease;
 }
 
 header h1 {
-  font-size: 2em;
+  font-size: 2.5rem;
   margin-bottom: 10px;
+  color: #0078d4;
 }
 
 header p {
-  font-size: 1.1em;
+  font-size: 1.2rem;
+  color: #555;
+}
+
+/* Navegação */
+nav {
+  display: flex;
+  justify-content: center;
+  background: #ffffff;
+  border-bottom: 1px solid #ddd;
+  padding: 10px 0;
+  gap: 20px;
+}
+
+nav a {
+  color: #0078d4;
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.3s, transform 0.2s;
+}
+
+nav a:hover {
+  color: #005a9e;
+  transform: translateY(-2px);
 }
 
 /* Seções */
 section {
-  background-color: white;
-  margin: 20px auto;
-  padding: 20px;
-  border-radius: 8px;
   max-width: 900px;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  margin: 40px auto;
+  padding: 30px 20px;
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+section:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.1);
 }
 
 section h2 {
   color: #0078d4;
-  margin-bottom: 10px;
+  margin-bottom: 15px;
 }
 
-/* Links */
+/* Cards de projeto */
+.card {
+  padding: 20px;
+  border-radius: 8px;
+  background-color: #e3f2fd;
+  margin-top: 15px;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+.card a {
+  display: inline-block;
+  margin-top: 10px;
+  color: white;
+  background-color: #0078d4;
+  padding: 8px 15px;
+  border-radius: 5px;
+  text-decoration: none;
+  transition: background 0.3s;
+}
+
+.card a:hover {
+  background-color: #005a9e;
+}
+
+/* Links gerais */
 a {
   color: #0078d4;
-  text-decoration: none;
-  transition: color 0.3s;
 }
 
 a:hover {
@@ -61,7 +117,7 @@ a:hover {
 /* Footer */
 footer {
   text-align: center;
-  margin: 30px 0;
+  padding: 20px;
   color: #555;
-  font-size: 0.9em;
+  font-size: 0.9rem;
 }
